@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -33,5 +34,12 @@ return require('packer').startup(function(use)
       ts_update()
     end,
   }
+
+  -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
+  use 'williamboman/mason.nvim'    
+  use 'williamboman/mason-lspconfig.nvim'
+
+  use 'neovim/nvim-lspconfig' 
+  use 'simrat39/rust-tools.nvim'
 
 end)
