@@ -1,16 +1,10 @@
--- Hybrid line numbers
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
--- Color scheme
-vim.cmd("colorscheme nordfox")
-
--- Plugins
-require("user.keymaps")
-require("user.dashboard")
-require("user.nvim-tree")
-require("user.treesitter")
-require("user.mason")
+require("user.packer")
+require("user.core.options")
+require("user.core.keymaps")
+require("user.plugins.dashboard")
+require("user.plugins.nvim-tree")
+require("user.plugins.treesitter")
+require("user.plugins.mason")
 
 local rt = require("rust-tools")
 
